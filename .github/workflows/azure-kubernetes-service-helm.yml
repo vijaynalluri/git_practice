@@ -94,10 +94,10 @@ jobs:
         uses: azure/use-kubelogin@v1
         with:
           kubelogin-version: 'v0.0.25'
-      - name: Set Kubernetes context
-        uses: Azure/k8s-set-context@v1
-          with:
-            kubeconfig: '${{ secrets.KUBECONFIG }}'
+      # - name: Set Kubernetes context
+      #   uses: Azure/k8s-set-context@v1
+      #     with:
+      #       kubeconfig: '${{ secrets.KUBECONFIG }}'
       # Retrieves your Azure Kubernetes Service cluster's kubeconfig file
       - name: Get K8s context
         uses: azure/aks-set-context@v3
